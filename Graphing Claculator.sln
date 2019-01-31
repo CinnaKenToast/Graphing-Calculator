@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61619844-9BC4-410B-93C7-52FAF860CBFF}"
 	ProjectSection(SolutionItems) = preProject
 		Documents\Eckert_Shipley - Software Engineering Vision Document.pdf = Documents\Eckert_Shipley - Software Engineering Vision Document.pdf
-		Requirements.txt = Requirements.txt
+		Documents\Requirements.txt = Documents\Requirements.txt
 	EndProjectSection
 EndProject
 Global
