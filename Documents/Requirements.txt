@@ -1,12 +1,12 @@
 Graphing Calculator Requirements
 
-Team Members
+Team Members:
 Ken and Daniel
 
-Purpose 
+Purpose:
 This project will be a graphing calculator that can be used on a computer
 
-Requirements
+Requirements:
 
 General 
 1.	Name: platform_os
@@ -19,41 +19,45 @@ General
 	
 3.	Name: numeric_buttons
 	Type: functional
-	Summary: 0-9 buttons along with decimal and negative sign
+	Summary: 0-9 buttons
 	
-4.	Name:
-	Type:
-	Summary:	
+4.	Name: decimal_button
+	Type: functional
+	Summary: button to add decimal point
 	
-3.	Name: artithmetic_buttons
+5.	Name: negative_button
+	Type: functional
+	Summary: button to change number from negative to positive and vice versa
+	
+6.	Name: artithmetic_buttons
 	Type: functional 
 	Summary: artithmetic functions (+,-,x,/) and equals (=)
 	
-4.	Name: misc_buttons
+7.	Name: misc_buttons
 	Type: functional
 	Summary: exponents, parenthesis, trig, inverse trig, square roots, absolute value, logarithm, factorial, modulus
 	
-5.	Name: order_of_operations
+8.	Name: order_of_operations
 	Type: constraint
 	Summary: have calculator follow order of operations
 	
-6.	Name: alphabetic keyboard
+9.	Name: alphabetic keyboard
 	Type: functional 
 	Summary: keyboard for keyboard
 	
-7.	Name: numeric_constants
+10.	Name: numeric_constants
 	Type: functional
 	Summary: pi, e
 	
-8.	Name: trig_mode
+11.	Name: trig_mode
 	Type: functional
-	Summary: radian and degree modes for calculating trig 
+	Summary: radian and degree modes for calculating trig
 	
-9.	Name: clear_all
+12.	Name: clear_all
 	Type: functional
 	Summary: clears both standard display and graph display
 	
-10.	Name: show_error
+13.	Name: show_error
 	Type: functional 
 	Summary: show an error when there are not enough arguments for a funciton
 
@@ -154,7 +158,7 @@ Graphing Mode
 	
 13.	Name: find_line_of_fit
 	Type: functional
-	Summary: find the line of best fit for a table
+	Summary: find the line of best fit for a table of data
 	
 14.	Name: clear_graph
 	Type: functional
