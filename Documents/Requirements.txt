@@ -24,40 +24,44 @@ General
 4.	Name: decimal_button
 	Type: functional
 	Summary: button to add decimal point
+
+5.	Name: decimal_point
+	Type: constraint
+	Summary: there can only be one decimal per number
 	
-5.	Name: negative_button
+6.	Name: negative_button
 	Type: functional
 	Summary: button to change number from negative to positive and vice versa
 	
-6.	Name: artithmetic_buttons
+7.	Name: artithmetic_buttons
 	Type: functional 
 	Summary: artithmetic functions (+,-,x,/) and equals (=)
 	
-7.	Name: misc_buttons
+8.	Name: misc_buttons
 	Type: functional
 	Summary: exponents, parenthesis, trig, inverse trig, square roots, absolute value, logarithm, factorial, modulus
 	
-8.	Name: order_of_operations
+9.	Name: order_of_operations
 	Type: constraint
 	Summary: have calculator follow order of operations
 	
-9.	Name: alphabetic keyboard
+10.	Name: alphabetic keyboard
 	Type: functional 
-	Summary: keyboard for keyboard
+	Summary: keyboard for input on calculator
 	
-10.	Name: numeric_constants
+11.	Name: numeric_constants
 	Type: functional
 	Summary: pi, e
 	
-11.	Name: trig_mode
+12.	Name: trig_mode
 	Type: functional
 	Summary: radian and degree modes for calculating trig
 	
-12.	Name: clear_all
+13.	Name: clear_all
 	Type: functional
 	Summary: clears both standard display and graph display
 	
-13.	Name: show_error
+14.	Name: show_error
 	Type: functional 
 	Summary: show an error when there are not enough arguments for a funciton
 
