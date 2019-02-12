@@ -45,6 +45,10 @@ General
 	Type: constraint
 	Summary: have calculator follow order of operations
 	
+.	Name: infix_operations
+	Type: constraint
+	Summary: the calculator will work with infix notation	
+	
 10.	Name: alphabetic keyboard
 	Type: functional 
 	Summary: keyboard for input on calculator
@@ -64,6 +68,11 @@ General
 14.	Name: show_error
 	Type: functional 
 	Summary: show an error when there are not enough arguments for a funciton
+
+.	Name: mode switch
+	Type: functional
+	Summary: a way to switch between graphing and calculating mode
+
 
 Standard Mode
 1.	Name: matricies
@@ -105,6 +114,10 @@ Standard Mode
 10.	Name: clear_standard
 	Type: functional
 	Summary: clear everything displayed in standard mode
+	
+.	Name: default_accuracy
+	Type: constrains
+	Summary: the default accuracy for functions will be 6 decimal points
 	
 11.	Name: rounding_accuracy
 	Type: functional
