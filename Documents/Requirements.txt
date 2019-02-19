@@ -11,11 +11,11 @@ Requirements:
 General 
 1.	Name: platform_os
 	Type: constraint 
-	Summary: computer will need to run Windows 10
+	Summary: computer will need to run Windows 10	
 	
 2.	Name: display
 	Type: functional 
-	Summary: show inputs and output results
+	Summary: show inputs and output results on a screen at the top of the application
 	
 3.	Name: numeric_buttons
 	Type: functional
@@ -39,7 +39,7 @@ General
 	
 .	Name: fancy_division
 	Type: functional
-	Summary: division that shows a fraction. The fraction can change the size of the numerator and denominator as needed to fit
+	Summary: division that shows a fraction. The fraction can change the size of the numerator and denominator as needed to 		 fit
 	
 8.	Name: misc_buttons
 	Type: functional
@@ -55,11 +55,11 @@ General
 	
 11.	Name: alphabetic keyboard
 	Type: functional 
-	Summary: keyboard for input on calculator
+	Summary: keyboard for input on calculator screen
 	
 12.	Name: numeric_constants
 	Type: functional
-	Summary: pi, e
+	Summary: pi, e, accurate to 15 digits
 	
 13.	Name: trig_mode
 	Type: functional
@@ -71,11 +71,11 @@ General
 	
 15.	Name: show_error
 	Type: functional 
-	Summary: show an error when there are not enough arguments for a funciton or for syntax errors
+	Summary: print an error on the screen when there are not enough arguments for a funciton or for syntax errors
 
 16.	Name: mode_switch
 	Type: functional
-	Summary: a way to switch between graphing and calculating mode
+	Summary: buttons on the left and right hand sides of the screen to switch between graphing and calculating mode
 
 
 Standard Mode
@@ -121,7 +121,7 @@ Standard Mode
 	
 10.	Name: clear_standard
 	Type: functional
-	Summary: clear everything displayed in standard mode
+	Summary: clear everything displayed on the standard mode screen
 	
 .	Name: default_accuracy
 	Type: constraint
@@ -129,7 +129,7 @@ Standard Mode
 	
 11.	Name: rounding_accuracy
 	Type: functional
-	Summary: user can determine how many digits of accuracy they would like to be displayed
+	Summary: user can determine how many decimal points they would like to be displayed, from 0 up to 15 digits
 
 
 Graphing Mode
