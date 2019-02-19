@@ -12,6 +12,10 @@ General
 1.	Name: platform_os
 	Type: constraint 
 	Summary: computer will need to run Windows 10	
+
+. 	Name: coding_language_experience
+	Type: risk
+	Summary: Daniel has only taken 1 class in C# while Ken very little experience with it
 	
 2.	Name: display
 	Type: functional 
@@ -35,15 +39,15 @@ General
 	
 7.	Name: artithmetic_buttons
 	Type: functional 
-	Summary: artithmetic functions (+,-,x,/) and equals (=)
+	Summary: artithmetic operators (+,-,x,/) and equals (=)
 	
 .	Name: fancy_division
 	Type: functional
-	Summary: division that shows a fraction. The fraction can change the size of the numerator and denominator as needed to 		 fit
+	Summary: division that shows a fraction. The fraction can change the size of the numerator and denominator as needed to 		 fit, whichever is larger. length of fraction can scale to size of numerator or denominator
 	
 8.	Name: misc_buttons
 	Type: functional
-	Summary: exponents, parenthesis, trig, inverse trig, square roots, absolute value, logarithm, factorial, modulus
+	Summary: exponents, parenthesis, trig, inverse trig, square roots, nth roots, absolute value, logarithm, factorial, modulus
 	
 9.	Name: order_of_operations
 	Type: constraint
@@ -57,6 +61,10 @@ General
 	Type: functional 
 	Summary: keyboard for input on calculator screen
 	
+. 	Name: character_support
+	Type: constraint
+	Summary: the keyboard will only support alphabetic characters and characters necessary for mathematic calculations. Not all characters on a QWERTY keyboard are used in math
+	
 12.	Name: numeric_constants
 	Type: functional
 	Summary: pi, e, accurate to 15 digits
@@ -67,7 +75,7 @@ General
 	
 14.	Name: clear_all
 	Type: functional
-	Summary: clears both standard display and graph display
+	Summary: clears both standard display and graph display without clearing what is stored in any variables
 	
 15.	Name: show_error
 	Type: functional 
@@ -75,8 +83,15 @@ General
 
 16.	Name: mode_switch
 	Type: functional
-	Summary: buttons on the left and right hand sides of the screen to switch between graphing and calculating mode
+	Summary: single button that will switch to the mode not in use. If on standard, button will switch to graph and vice versa
 
+.	Name: sqaure_root_scaling
+	Type: fuctional
+	Summary: the size of the square root will scale with what is put inside, it will be able to increase in length and size as needed
+
+.	Name: input_boxes
+	Type: fuctional
+	Summary: in the event an operator needs an input (sqaure root, fraction, matrices, summation, etc) to determine how the operator will appear, there will be boxes in the areas that need an input 
 
 Standard Mode
 1.	Name: display_matrix
@@ -85,11 +100,11 @@ Standard Mode
 	
 .	Name: reduce_matrix
 	Type: functional
-	Summary: reduce an inputted with matrix into reduce row echelon form
+	Summary: reduce an inputted matrix into reduce row echelon form
 	
 2.	Name: inequalities
 	Type: functional 
-	Summary: input and show results of inequalities
+	Summary: input and show results of inequalities whether they are true or false
 	
 3.	Name: summations
 	Type: functional
@@ -105,11 +120,11 @@ Standard Mode
 	
 6.	Name: store_variable
 	Type: functional
-	Summary: store a number to a variable
+	Summary: store a number to a alphabetic variable
 	
 7.	Name: clear_specific_variable
 	Type: functional
-	Summary: user can choose a specific variable to clear out of all the variables stored
+	Summary: user can choose a specific variable to delete out of all the variables stored
 	
 8.	Name: clear_all_variables
 	Type: functional 
@@ -121,11 +136,11 @@ Standard Mode
 	
 10.	Name: clear_standard
 	Type: functional
-	Summary: clear everything displayed on the standard mode screen
+	Summary: clear everything displayed on the standard mode screen without clearing varibales and their definitions
 	
 .	Name: default_accuracy
 	Type: constraint
-	Summary: the default accuracy for functions will be 6 decimal points
+	Summary: the output will default to showing 6 numbers with decimal included, otherwise it will show the result in scientific notation if more accuracy is needed
 	
 11.	Name: rounding_accuracy
 	Type: functional
@@ -143,11 +158,15 @@ Graphing Mode
 	
 .	Name: multiple_functions
 	Type: functional
-	Summary: the graph can has multiple functions displayed on the same graph
+	Summary: the graph can have multiple functions displayed on the same graph
 
 .	Name: delete_function
 	Type: functional
 	Summary: the user can delete a specific function from the graph that they choose
+	
+.	Name: edit_function
+	Type: functional
+	Summary: the user can edit what a function equals [f(x)=x -> f(x)=x^2]
 	
 3.	Name: switch_functions
 	Type: functional 
@@ -157,6 +176,14 @@ Graphing Mode
 	Type: functional
 	Summary: zoom in and out of a graph from a point chosen on the graph
 	
+.	Name: standard_zoom
+	Type: functional
+	Summary: resizes back to default zoom interval	
+
+.	Name: default_zoom_interval
+	Type: constraint
+	Summary: the default interval for the graph will be -10 < x < 10 and -10 < y < 10
+	
 5.	Name: change_view_interval
 	Type: functional
 	Summary: change the display over separate intervals of the y and x axis
@@ -165,21 +192,9 @@ Graphing Mode
 	Type: functional
 	Summary: show and hide axes on the graph
 	
-7.	Name: show_grid_numbers
-	Type: functional 
-	Summary: show and hide grid numbers on the axes
-	
-.	Name: change_grid_interval
+.	Name: find_zero
 	Type: functional
-	Summary: user can change the interval between grid numbers
-	
-.	Name: default_grid_interval
-	Type: constraint
-	Summary: the default interval for the grid will be -10 < x < 10 and -10 < y < 10
-	
-8.	Name: find_zero
-	Type: functional
-	Summary: find the root of a chosen function
+	Summary: find the root of a chosen function where a line crosses x = 0
 	
 9.	Name: find_intersection
 	Type: functional 
@@ -187,13 +202,13 @@ Graphing Mode
 	
 10.	Name: find_min_max
 	Type: functional
-	Summary: find the min and max of a function within a given interval in the x direction
+	Summary: find the min and max of a function within a given interval in the x direction if there is one, otherwise it will not display a result
 	
 11.	Name: display_table
 	Type: functional
 	Summary: display a table of the points on the functions in the graph
 	
-12.	Name: display_data_points
+12.	Name: data_points_graph
 	Type: functional
 	Summary: input a set of points into a table and display the points in a graph
 	
@@ -203,7 +218,11 @@ Graphing Mode
 	
 14.	Name: clear_graph
 	Type: functional
-	Summary: clear graph and all functions that are displayed leaving behind a blank screen 
+	Summary: clear graph and all functions that are displayed leaving behind a default_blank_screen
+
+.	Name: default_blank_screen
+	Type: constraint
+	Summary: a blank graph will be in the default zoom interval, showing the axes, and only displaying the grid number for the edges of the screen and x=1,y=1
 
 
 
