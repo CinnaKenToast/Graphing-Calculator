@@ -1,0 +1,30 @@
+1.  The user opens the calculator. They want to find the result of a couple different calculations. First they want to find the sine of 45 degrees. They 
+enter in "sin(45)" to the calculator expecting to see sqrt(2)/2. Instead they see a different result. They realize that the calculator was set in radian mode by 
+default. The user then goes into the menu settings to change the calculator into degree mode. In doing so, they calculate sin(45) once again and they get the expected 
+result of sqrt(2)/2. Now they have a basic system of linear equations with equation 1 being "2x + 3y = 4" and equation 2 is "6y = 2". Knowing how to solve this, the 
+user creates variable y by press the "y" key on they keyboard and then follows it with the variable setting button showing "y -> " and then inputs "2/6". Then they 
+solve for x in the first equation with "x = (4 - 3y)/2". They type the left hand side of the equation into the calculator and the result of "3/2" appears on the screen.
+The user is now done with the calculator and closes the application.
+
+2. The user opens the calculator and sees the calcutors open on the standard calculation screen. They want to graph some functions so they press the button that switches 
+the calculator into graphing mode. A screen with a blank graph is now on the screen waiting for the first function to be inputted. They start with the basic function of 
+f(x) = x^2. After pressing enter, a parabola apprears on the graph. Then they press tab to input another function and the calculator waits for the next function. Then 
+they input the function f(x) = x. On the same graph, a linear line is displayed. The user wants to find the intersections of the two graphs so in a menu they press the 
+intersection button. The user drags their mouse to the graph and a vertical line follows the cursor waiting for the input of the first x postion of an interval. First 
+they place the cursor on x = -1 and click which makes the first interval of the intersection function be x = -1. Then they drag the cursor over to x = 0.5 and click. A
+dot appears on the graph at (0,0) showing that there is an intersection at (0,0) of the functions f(x) = x^2 and f(x) = x. The user wants to find the other intersection
+so they follow the same process clicking on the screen at x = 0.5 and x = 2. Another dot appears at (1,,1) showing there is a second intersection at (1,1). Now the user 
+decides they don't want f(x) = x^2 to be displayed on the graph so the click on the parabola which bolds the line and they press the delete key on their keyboard. The 
+graph now only show f(x) = x. The user then closes the calculator.
+
+3. The user opens the calculator and wants to find the result of 3 equations in a system of linear equations. This time they decide they want to use a matrix. They have 
+the equations "3x + 2y + 5z = 1", "7z + 5y = 6", and "2x -4 + 8y + 5z = 0". The user knows that they will need a 3x4 matrix because there are 3 equations and 3 unknowns.
+The 4th column on the 2nd dimension is for the constants. The user types "rref" and then presses the matrix button. A prompt appears asking what size matrix the user 
+wants so they input 3 rows and 4 columns. A 3x4 matrix appears on the screen next to the letters "rref". The matrix has boxes in each cell indicating they need an input. 
+The user fills the matrix with [3, 2, 5, 1, 0, 5, 7, 6, 2, 8, 5, 4] (following left to right and top to bottom). Then the user presses the equal sign on the screen to 
+find the result. An error message appears saying "Missing (". Since rref is a function, it must have an opening parenthesis to call the function. The user moves the 
+cursor in front of the opening bracket of the matrix and adds the (. A shadow of ) appears on the opposite side of the matrix. The user presses enter and another matrix 
+is displayed. [1, 0 , 0 , -21/23, 0, 1 , 0 , 8/23, 0, 0, 1, 14/23] indicating that x = -21/23, y = 8/23, and z = 14/23. The user wants the answers in demical instead of 
+fractions so they scroll up to the previous result and presses enter to copy it to the current line. The user goes into a menu to find a function that converts fraction 
+to decimal and presses enter. Next to the matric "-> Decimal" appears and they press enter. Another matrix appears [1, 0 , 0 , -0.913043, 0, 1 , 0 , 0.347826, 0, 0, 1, 
+0.608696] indicating the answers being turned into decimal form. The user closes the calcualtor. 
