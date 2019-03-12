@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Graphing_Claculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="625" Width="525">
+        Title="MainWindow" Height="725" Width="550">
     <Grid>
-        
+        <Button Content="1" HorizontalAlignment="Left" Height="50" Margin="50,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.465,1.828"/>
+        <Button Content="2" HorizontalAlignment="Left" Height="50" Margin="125,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="3" HorizontalAlignment="Left" Height="50" Margin="200,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="4" HorizontalAlignment="Left" Height="50" Margin="50,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="5" HorizontalAlignment="Left" Height="50" Margin="125,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="6" HorizontalAlignment="Left" Height="50" Margin="200,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="7" HorizontalAlignment="Left" Height="50" Margin="50,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="8" HorizontalAlignment="Left" Height="50" Margin="125,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="9" HorizontalAlignment="Left" Height="50" Margin="200,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="0" HorizontalAlignment="Left" Height="50" Margin="125,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="." HorizontalAlignment="Left" Height="50" Margin="50,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+        <Button Content="=" HorizontalAlignment="Left" Height="50" Margin="200,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771"/>
+
     </Grid>
 </Window>

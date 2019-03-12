@@ -1,0 +1,52 @@
+Graphing Calculator
+Vision Document
+Daniel Eckert, Ken Shipley 
+Introduction
+Purpose
+The purpose of this document is to collect and define the features for the graphing calculator and why it is being created. It will focus on the abilities needed by the stakeholders and users. 
+Scope
+The application that will be made is a graphing calculator. The calculator will be developed by Ken Shipley and Daniel Eckert. It will have all the buttons a normal graphing calculator will have along with a screen to display any results that are calculated. The calculator will be able to accept inputs by pressing buttons in the application or typing from the keyboard. 
+Positioning
+Business opportunity
+Having a calculator handy is a must for anyone attending school, or for someone who needs to run calculations for work. However, carrying around a calculator can prove to be a hassle. You can download a software into your computer, but most programs cost money, and you still have to learn the language for that particular system. The system we are creating aims to resolve these problems  
+Problem statement
+
+
+The problem of
+Having an accessible, easy to use graphing calculator
+affects
+Students as well as workers
+The impact of which is
+Having to buy a calculator or obtaining a graphing software and learning how to use it
+A successful solution of this would be
+To create a new program that has the advantages of a handheld graphing calculator but doesn’t require that you learn a new programing language
+
+Stakeholder and user descriptions
+Stakeholder
+Daniel - I have taken 3005 with Dr. Church. I also have a minor in mathematics
+Ken - I have done object-oriented programming but I have little experience with C#. 
+User
+Anybody that can use a regular graphing calculator can be a user of this one. 
+Product overview
+Product perspective
+The graphing calculator application is a stand-alone application and will not require any other software or internet connection to use. 
+Summary of capabilities
+The calculator will have a display that will show the input made by the user whether it be from the keyboard or from the buttons in the program. It will be able to do any basic arithmetic and basic algebra such as a finding the value of a number raised to an exponent, finding a specific root, etc. The calculator will also have the capability to graph single variable functions. This can be done by going to a separate screen for the default calculations.
+Assumptions and dependencies
+It is assumed that the user is running a windows operating system
+The default language is US English. It’s assumed that the user is able to understand this
+It is also assumed that the user has a mouse and keyboard
+Users must have an understanding of basic algebra concepts
+Product features
+Start applications
+Exit option
+Accept mouse and keyboard input
+Display output
+Will allow the many of the features / functions found on a standard graphing calculator such as basic arithmetic and algebra
+Export graphs as .png files
+If time permits, we will add the ability to solve derivatives and integrals. 
+Constraints
+We might run into issues with the part of graphing a function, especially displaying the graph. Ken has had no experience with C# so this is all a learning experience. Daniel has some experience with C#, but it is limited. When it comes to the math concepts there should be no problems. We have both taken numerical analysis so hopefully that will help if we need to solve for any complex functions. 
+When it comes to the calculator itself there is a plethora of problems we could run into. Looking at a TI - 84 there are a lot of functionality within it. While doing calculus is easy programming it is a whole different story. We may also run into problems with matrices and function analysis.    
+Other product requirements
+No other requirements are necessary.
