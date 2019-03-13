@@ -24,5 +24,63 @@ namespace Graphing_Claculator
         {
             InitializeComponent();
         }
+        //numeric buttons
+        public void one_button_click(object sender, EventArgs e)
+        {
+            Console.WriteLine( "1");
+        }
+        public void two_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void three_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void four_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void five_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void six_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void seven_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void eight_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void nine_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void zero_button_click(object sender, EventArgs e)
+        {
+
+        }
+        //arithmetic buttons
+        public void plus_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void minus_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void division_button_click(object sender, EventArgs e)
+        {
+
+        }
+        public void multiply_button_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
