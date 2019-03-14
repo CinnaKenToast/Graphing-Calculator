@@ -20,67 +20,204 @@ namespace Graphing_Claculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double firstNum;
+        string operation;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
         //numeric buttons
-        public void one_button_click(object sender, EventArgs e)
+        private void one_button_Click_1(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine( "1");
+            if(Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "1";
+            }
+            else
+            {
+                Screen.Text += "1";
+            }
         }
-        public void two_button_click(object sender, EventArgs e)
-        {
 
+        private void two_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "2";
+            }
+            else
+            {
+                Screen.Text += "2";
+            }
         }
-        public void three_button_click(object sender, EventArgs e)
-        {
 
+        private void three_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "3";
+            }
+            else
+            {
+                Screen.Text += "3";
+            }
         }
-        public void four_button_click(object sender, EventArgs e)
-        {
 
+        private void four_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "4";
+            }
+            else
+            {
+                Screen.Text += "4";
+            }
         }
-        public void five_button_click(object sender, EventArgs e)
-        {
 
+        private void five_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "5";
+            }
+            else
+            {
+                Screen.Text += "5";
+            }
         }
-        public void six_button_click(object sender, EventArgs e)
-        {
 
+        private void six_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "6";
+            }
+            else
+            {
+                Screen.Text += "6";
+            }
         }
-        public void seven_button_click(object sender, EventArgs e)
-        {
 
+        private void seven_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "7";
+            }
+            else
+            {
+                Screen.Text += "7";
+            }
         }
-        public void eight_button_click(object sender, EventArgs e)
-        {
 
+        private void eight_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "8";
+            }
+            else
+            {
+                Screen.Text += "8";
+            }
         }
-        public void nine_button_click(object sender, EventArgs e)
-        {
 
+        private void nine_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Screen.Text != null && Screen.Text == "0")
+            {
+                Screen.Text = "9";
+            }
+            else
+            {
+                Screen.Text += "9";
+            }
         }
-        public void zero_button_click(object sender, EventArgs e)
-        {
 
+        private void zero_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text += "0";
         }
-        //arithmetic buttons
-        public void plus_button_click(object sender, EventArgs e)
-        {
 
+        private void clear_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = "0";
         }
-        public void minus_button_click(object sender, EventArgs e)
-        {
 
+        private void plus_button_Click(object sender, RoutedEventArgs e)
+        {
+            firstNum = Convert.ToDouble(Screen.Text);
+            Screen.Text = "0";
+            operation = "+";
         }
-        public void division_button_click(object sender, EventArgs e)
-        {
 
+        private void minus_button_Click(object sender, RoutedEventArgs e)
+        {
+            firstNum = Convert.ToDouble(Screen.Text);
+            Screen.Text = "0";
+            operation = "-";
         }
-        public void multiply_button_click(object sender, EventArgs e)
-        {
 
+        private void division_button_Click(object sender, RoutedEventArgs e)
+        {
+            firstNum = Convert.ToDouble(Screen.Text);
+            Screen.Text = "0";
+            operation = "/";
+        }
+
+        private void multiply_button_Click(object sender, RoutedEventArgs e)
+        {
+            firstNum = Convert.ToDouble(Screen.Text);
+            Screen.Text = "0";
+            operation = "*";
+        }
+
+        private void decimal_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text += ".";
+        }
+
+        private void equals_button_Click(object sender, RoutedEventArgs e)
+        {
+            double secondNum;
+            double result;
+
+            secondNum = Convert.ToDouble(Screen.Text);
+
+            if(operation == "+")
+            {
+                result = (firstNum + secondNum);
+                Screen.Text = Convert.ToString(result);
+                firstNum = result;
+            }
+            else if(operation == "-")
+            {
+                result = (firstNum - secondNum);
+                Screen.Text = Convert.ToString(result);
+                firstNum = result;
+            }
+            else if(operation == "*")
+            {
+                result = (firstNum * secondNum);
+                Screen.Text = Convert.ToString(result);
+                firstNum = result;
+            }
+            else if (operation == "/")
+            {
+                if(secondNum == 0)
+                {
+                    Screen.Text = "Cannot divide by zero";
+                }
+                else
+                {
+                    result = (firstNum / secondNum);
+                    Screen.Text = Convert.ToString(result);
+                    firstNum = result;
+                }
+            }
         }
     }
 }
