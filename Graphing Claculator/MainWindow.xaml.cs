@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//how we get to to talk to our libary
+using CalcLib;
+
 namespace Graphing_Claculator
 {
     /// <summary>
