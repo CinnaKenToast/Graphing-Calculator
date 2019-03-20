@@ -79,7 +79,7 @@ namespace Graphing_Claculator
 
         private void zero_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text += "0";
+            Screen.Text = ButtonControl.ZeroButtonPress(Screen.Text);
         }
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
@@ -117,7 +117,7 @@ namespace Graphing_Claculator
 
         private void decimal_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text += ".";
+            Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
         }
 
         private void equals_button_Click(object sender, RoutedEventArgs e)

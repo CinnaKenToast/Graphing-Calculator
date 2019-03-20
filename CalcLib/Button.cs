@@ -22,6 +22,31 @@ namespace CalcLib
             }
         }
 
+        public static string ZeroButtonPress(string Text)
+        {
+            if(Text == null || Text == "0")
+            {
+                return Text;
+            }
+            else
+            {
+                Text += "0";
+                return Text;
+            }
+        }
+
+        public static string DecimalButtonPress(string Text)
+        {
+            if(Text.Contains("."))
+            {
+                return Text;
+            }
+            else
+            {
+                Text += ".";
+                return Text;
+            }
+        }
 
     }
 }
