@@ -34,110 +34,47 @@ namespace Graphing_Claculator
         //numeric buttons
         private void one_button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "1";
-            }
-            else
-            {
-                Screen.Text += "1";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "1");
         }
 
         private void two_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "2";
-            }
-            else
-            {
-                Screen.Text += "2";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "2");
         }
 
         private void three_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "3";
-            }
-            else
-            {
-                Screen.Text += "3";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "3");
         }
 
         private void four_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "4";
-            }
-            else
-            {
-                Screen.Text += "4";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "4");
         }
 
         private void five_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "5";
-            }
-            else
-            {
-                Screen.Text += "5";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "5");
         }
 
         private void six_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "6";
-            }
-            else
-            {
-                Screen.Text += "6";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "6");
         }
 
         private void seven_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "7";
-            }
-            else
-            {
-                Screen.Text += "7";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "7");
         }
 
         private void eight_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "8";
-            }
-            else
-            {
-                Screen.Text += "8";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "8");
         }
 
         private void nine_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Screen.Text != null && Screen.Text == "0")
-            {
-                Screen.Text = "9";
-            }
-            else
-            {
-                Screen.Text += "9";
-            }
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "9");
         }
 
         private void zero_button_Click(object sender, RoutedEventArgs e)
