@@ -24,7 +24,8 @@ namespace CalcLib
 
         public static string ZeroButtonPress(string Text)
         {
-            if(Text == null || Text == "0")
+            //if there is just a 0, dont add more 0s
+            if(Text != null && Text == "0")
             {
                 return Text;
             }
@@ -37,6 +38,7 @@ namespace CalcLib
 
         public static string DecimalButtonPress(string Text)
         {
+            //if there is already a decimal, dont add another
             if(Text.Contains("."))
             {
                 return Text;
