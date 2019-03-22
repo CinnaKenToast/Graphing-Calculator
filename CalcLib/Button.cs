@@ -52,5 +52,12 @@ namespace CalcLib
             }
         }
 
+        //just sets the string in the text box to 0,
+        public static string ClearButtonPress(string Text)
+        {
+            Text = "0";
+            return Text;
+        }
+
     }
 }

@@ -84,7 +84,7 @@ namespace Graphing_Claculator
 
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = "0";
+            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
         private void plus_button_Click(object sender, RoutedEventArgs e)
