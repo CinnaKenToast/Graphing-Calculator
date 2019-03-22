@@ -39,6 +39,8 @@ namespace CalcLib
         public static string DecimalButtonPress(string Text)
         {
             //if there is already a decimal, dont add another
+            //only works for the setup we have now,
+            //wont handle more than one number
             if(Text.Contains("."))
             {
                 return Text;
