@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalcLib
 {
-    interface IExpression
+    public interface IExpression
     {
         double evaluate();
     }
@@ -28,7 +28,7 @@ namespace CalcLib
            return evaluate(left.evaluate(), right.evaluate());
         }
 
-        abstract protected double evaluate(double left, double right);
+        abstract public double evaluate(double left, double right);
     }
 
     class NumExression : IExpression
@@ -48,7 +48,11 @@ namespace CalcLib
 
     class AdditionExpression : BinaryExpression
     {
-        protected override double evaluate(double left, double right)
+        public AdditionExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
         {
             return left + right;
         }
@@ -56,7 +60,11 @@ namespace CalcLib
 
     class MinusExpression : BinaryExpression
     {
-        protected override double evaluate(double left, double right)
+        public MinusExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
         {
             return left - right;
         }
@@ -64,7 +72,11 @@ namespace CalcLib
 
     class MultiplyExpression : BinaryExpression
     {
-        protected override double evaluate(double left, double right)
+        public MultiplyExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
         {
             return left * right;
         }
@@ -72,7 +84,11 @@ namespace CalcLib
 
     class DivideExpression : BinaryExpression
     {
-        protected override double evaluate(double left, double right)
+        public DivideExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
         {
             return left / right;
         }
@@ -80,7 +96,11 @@ namespace CalcLib
 
     class ExpononetExpression : BinaryExpression
     {
-        protected override double evaluate(double left, double right)
+        public ExpononetExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
         {
             return Math.Pow(left,right);
         }
@@ -133,35 +153,90 @@ namespace CalcLib
             return ans;
         }
     }
-
-    class SquareRootExpresion : IExpression
+    
+    class SinExpression: IExpression
     {
-        private IExpression operand;
-        public SquareRootExpresion(IExpression operand)
+        private double operand;
+
+        public SinExpression(double operand)
         {
             this.operand = operand;
         }
 
         public double evaluate()
         {
-            return Math.Sqrt(operand.evaluate());
+            return Math.Sin(operand);
         }
     }
-    class Tokens
+
+    class CosExpression : IExpression
     {
-        private List<string> token; 
-        public Tokens()
+        private double operand;
+
+        public CosExpression(double operand)
         {
-            token = new List<string> { "(", ")", "+", "-", "/", "*", "sin", "cos", "tan", "cos", "csc", "tan" };
+            this.operand = operand;
         }
-        public void addToken(string newToken)
+
+        public double evaluate()
         {
-            token.Add(newToken);
+            return Math.Cos(operand);
         }
-        public void deleteToken(string oldToken)
+    }
+
+    class TanExpression : IExpression
+    {
+        private double operand;
+
+        public TanExpression(double operand)
         {
-            token.Remove(oldToken);
+            this.operand = operand;
         }
-       
+
+        public double evaluate()
+        {
+            return Math.Tan(operand);
+        }
+    }
+
+    class CotExpression : IExpression
+    {
+        private double operand;
+
+        public CotExpression(double operand)
+        {
+            this.operand = operand;
+        }
+        public double evaluate()
+        {
+            return 1 / Math.Tan(operand);
+        }
+    }
+
+    class CscExpression : IExpression
+    {
+        private double operand;
+
+        public CscExpression(double operand)
+        {
+            this.operand = operand;
+        }
+        public double evaluate()
+        {
+            return 1 / Math.Sin(operand);
+        }
+    }
+    class SecExpression : IExpression
+    {
+        private double operand;
+
+        public SecExpression(double operand)
+        {
+            this.operand = operand;
+        }
+        public double evaluate()
+        {
+            return 1 / Math.Cos(operand);
+        }
     }
 }
