@@ -133,4 +133,35 @@ namespace CalcLib
             return ans;
         }
     }
+
+    class SquareRootExpresion : IExpression
+    {
+        private IExpression operand;
+        public SquareRootExpresion(IExpression operand)
+        {
+            this.operand = operand;
+        }
+
+        public double evaluate()
+        {
+            return Math.Sqrt(operand.evaluate());
+        }
+    }
+    class Tokens
+    {
+        private List<string> token; 
+        public Tokens()
+        {
+            token = new List<string> { "(", ")", "+", "-", "/", "*", "sin", "cos", "tan", "cos", "csc", "tan" };
+        }
+        public void addToken(string newToken)
+        {
+            token.Add(newToken);
+        }
+        public void deleteToken(string oldToken)
+        {
+            token.Remove(oldToken);
+        }
+       
+    }
 }
