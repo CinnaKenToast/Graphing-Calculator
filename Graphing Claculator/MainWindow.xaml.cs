@@ -90,26 +90,22 @@ namespace Graphing_Claculator
 
         private void plus_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text += " + ";
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "+");
         }
 
         private void minus_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text += " - ";
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "-");
         }
 
         private void division_button_Click(object sender, RoutedEventArgs e)
         {
-            firstNum = Convert.ToDouble(Screen.Text);
-            Screen.Text = "0";
-            operation = "/";
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "/");
         }
 
         private void multiply_button_Click(object sender, RoutedEventArgs e)
         {
-            firstNum = Convert.ToDouble(Screen.Text);
-            Screen.Text = "0";
-            operation = "*";
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "*");
         }
 
         private void decimal_button_Click(object sender, RoutedEventArgs e)
@@ -119,42 +115,7 @@ namespace Graphing_Claculator
 
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            double secondNum;
-            double result;
-
-            secondNum = Convert.ToDouble(Screen.Text);
-
-            if(operation == "+")
-            {
-                result = (firstNum + secondNum);
-                Screen.Text = Convert.ToString(result);
-                firstNum = result;
-            }
-            else if(operation == "-")
-            {
-                result = (firstNum - secondNum);
-                Screen.Text = Convert.ToString(result);
-                firstNum = result;
-            }
-            else if(operation == "*")
-            {
-                result = (firstNum * secondNum);
-                Screen.Text = Convert.ToString(result);
-                firstNum = result;
-            }
-            else if (operation == "/")
-            {
-                if(secondNum == 0)
-                {
-                    Screen.Text = "Cannot divide by zero";
-                }
-                else
-                {
-                    result = (firstNum / secondNum);
-                    Screen.Text = Convert.ToString(result);
-                    firstNum = result;
-                }
-            }
+            throw new NotImplementedException();
         }
     }
 }

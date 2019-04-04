@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CalcLib
 {
@@ -34,20 +31,6 @@ namespace CalcLib
             }
         }
 
-        public static string ZeroButtonPress(string Text)
-        {
-            //if there is just a 0, dont add more 0s
-            if(Text != null && Text == "0")
-            {
-                return Text;
-            }
-            else
-            {
-                Text += "0";
-                return Text;
-            }
-        }
-
         public static string DecimalButtonPress(string Text)
         {
             //if there is already a decimal, dont add another
@@ -69,6 +52,30 @@ namespace CalcLib
         {
             Text = "0";
             return Text;
+        }
+
+        public static string arithmeticButonPress(string Text, string opr)
+        {
+            string operate = opr;
+
+            switch (operate)
+            {
+                case "+":
+                    return Text += "+";
+                    break;
+                case "-":
+                    return Text += "-";
+                    break;
+                case "/":
+                    return Text += "/";
+                    break;
+                case "*":
+                    return Text += "*";
+                    break;
+                default:
+                    throw new ArgumentException("argument passed is not in switch statement!");
+            }
+
         }
 
     }
