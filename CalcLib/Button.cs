@@ -62,16 +62,12 @@ namespace CalcLib
             {
                 case "+":
                     return Text += "+";
-                    break;
                 case "-":
                     return Text += "-";
-                    break;
                 case "/":
                     return Text += "/";
-                    break;
                 case "*":
                     return Text += "*";
-                    break;
                 default:
                     throw new ArgumentException("argument passed is not in switch statement!");
             }

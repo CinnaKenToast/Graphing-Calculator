@@ -5,31 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Graphing_Claculator"
         mc:Ignorable="d"
-        Title="Graphing Calculator" Height="750" Width="550">
+        Title="Graphing Calculator" Height="700" Width="550">
     <Grid>
-        <Button x:Name="one_button" Content="1" HorizontalAlignment="Left" Height="50" Margin="50,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.465,1.828" Click="one_button_Click_1"/>
-        <Button x:Name="two_button" Content="2" HorizontalAlignment="Left" Height="50" Margin="125,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="two_button_Click"/>
-        <Button x:Name="three_button" Content="3" HorizontalAlignment="Left" Height="50" Margin="200,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="three_button_Click"/>
-        <Button x:Name="plus_button" Content="+" HorizontalAlignment="Left" Height="50" Margin="275,400,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="plus_button_Click"/>
+        <Button x:Name="one_button" Content="1" HorizontalAlignment="Left" Height="40" Margin="25,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.465,1.828" Click="one_button_Click_1"/>
+        <Button x:Name="two_button" Content="2" HorizontalAlignment="Left" Height="40" Margin="90,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="two_button_Click"/>
+        <Button x:Name="three_button" Content="3" HorizontalAlignment="Left" Height="40" Margin="155,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="three_button_Click"/>
+        <Button x:Name="plus_button" Content="+" HorizontalAlignment="Left" Height="40" Margin="220,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="plus_button_Click"/>
 
-        <Button x:Name="four_button" Content="4" HorizontalAlignment="Left" Height="50" Margin="50,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="four_button_Click"/>
-        <Button x:Name="five_button" Content="5" HorizontalAlignment="Left" Height="50" Margin="125,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="five_button_Click"/>
-        <Button x:Name="six_button" Content="6" HorizontalAlignment="Left" Height="50" Margin="200,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="six_button_Click"/>
-        <Button x:Name="minus_button" Content="-" HorizontalAlignment="Left" Height="50" Margin="275,475,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="minus_button_Click"/>
+        <Button x:Name="four_button" Content="4" HorizontalAlignment="Left" Height="40" Margin="25,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="four_button_Click"/>
+        <Button x:Name="five_button" Content="5" HorizontalAlignment="Left" Height="40" Margin="90,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="five_button_Click"/>
+        <Button x:Name="six_button" Content="6" HorizontalAlignment="Left" Height="40" Margin="155,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="six_button_Click"/>
+        <Button x:Name="minus_button" Content="-" HorizontalAlignment="Left" Height="40" Margin="220,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="minus_button_Click"/>
 
-        <Button x:Name="seven_button" Content="7" HorizontalAlignment="Left" Height="50" Margin="50,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="seven_button_Click"/>
-        <Button x:Name="eight_button" Content="8" HorizontalAlignment="Left" Height="50" Margin="125,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="eight_button_Click"/>
-        <Button x:Name="nine_button" Content="9" HorizontalAlignment="Left" Height="50" Margin="200,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="nine_button_Click"/>
-        <Button x:Name="division_button" Content="/" HorizontalAlignment="Left" Height="50" Margin="275,550,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="division_button_Click"/>
+        <Button x:Name="seven_button" Content="7" HorizontalAlignment="Left" Height="40" Margin="25,535,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="seven_button_Click"/>
+        <Button x:Name="eight_button" Content="8" HorizontalAlignment="Left" Height="40" Margin="90,535,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="eight_button_Click"/>
+        <Button x:Name="nine_button" Content="9" HorizontalAlignment="Left" Height="40" Margin="155,535,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="nine_button_Click"/>
+        <Button x:Name="division_button" Content="/" HorizontalAlignment="Left" Height="40" Margin="220,535,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="division_button_Click"/>
 
-        <Button x:Name="zero_button" Content="0" HorizontalAlignment="Left" Height="50" Margin="125,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="zero_button_Click"/>
-        <Button x:Name="decimal_button" Content="." HorizontalAlignment="Left" Height="50" Margin="50,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="decimal_button_Click"/>
-        <Button x:Name="equals_button" Content="=" HorizontalAlignment="Left" Height="50" Margin="200,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="equals_button_Click"/>
-        <Button x:Name="multiply_button" Content="*" HorizontalAlignment="Left" Height="50" Margin="275,625,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="multiply_button_Click"/>
-        <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="50" Margin="275,325,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
+        <Button x:Name="zero_button" Content="0" HorizontalAlignment="Left" Height="40" Margin="90,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="zero_button_Click"/>
+        <Button x:Name="decimal_button" Content="." HorizontalAlignment="Left" Height="40" Margin="25,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="decimal_button_Click"/>
+        <Button x:Name="equals_button" Content="=" HorizontalAlignment="Left" Height="40" Margin="155,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="equals_button_Click"/>
+        <Button x:Name="multiply_button" Content="*" HorizontalAlignment="Left" Height="40" Margin="220,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="multiply_button_Click"/>
 
+        <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="40" Margin="220,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
 
         <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
+        
+        <!-- still need to figure out how to add a graphing view 
+        needs to be done with the menu somehow-->
         <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="auto" />
 
     </Grid>
