@@ -41,7 +41,7 @@ namespace CalcLib
                 return Text;
             }
             else
-            {
+            { 
                 Text += ".";
                 return Text;
             }

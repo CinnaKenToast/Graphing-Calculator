@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -23,9 +23,6 @@ namespace Graphing_Claculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        double firstNum;
-        string operation;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -83,11 +80,6 @@ namespace Graphing_Claculator
         }
 
         //arithmetic buttions
-        private void clear_button_Click(object sender, RoutedEventArgs e)
-        {
-            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
-        }
-
         private void plus_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "+");
@@ -113,9 +105,16 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
         }
 
+        //misc buttons
+        private void clear_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
+        }
+
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
+
     }
 }
