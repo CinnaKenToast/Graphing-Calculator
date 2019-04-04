@@ -79,9 +79,10 @@ namespace Graphing_Claculator
 
         private void zero_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.ZeroButtonPress(Screen.Text);
+            Screen.Text = ButtonControl.NumButtonPress(Screen.Text, "0");
         }
 
+        //arithmetic buttions
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
@@ -89,16 +90,12 @@ namespace Graphing_Claculator
 
         private void plus_button_Click(object sender, RoutedEventArgs e)
         {
-            firstNum = Convert.ToDouble(Screen.Text);
-            Screen.Text = "0";
-            operation = "+";
+            Screen.Text += " + ";
         }
 
         private void minus_button_Click(object sender, RoutedEventArgs e)
         {
-            firstNum = Convert.ToDouble(Screen.Text);
-            Screen.Text = "0";
-            operation = "-";
+            Screen.Text += " - ";
         }
 
         private void division_button_Click(object sender, RoutedEventArgs e)

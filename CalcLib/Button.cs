@@ -10,11 +10,23 @@ namespace CalcLib
     {
         public static string NumButtonPress(string Text, string num)
         {
-            if(Text != null && Text == "0")
+            //check if null
+            if (Text == null || num == null)
+            {
+                throw new ArgumentNullException("Cannot pass null text.");
+            }
+            // if text is just 0, dont add more
+            else if (Text.Trim() == "0" && num == "0")
+            {
+                return Text;
+            }
+            // if its just 0 on the screen, replace it
+            else if (Text.Trim() == "0" && num != "0")
             {
                 Text = num;
                 return Text;
             }
+            //otherwise, just add the number
             else
             {
                 Text += num;

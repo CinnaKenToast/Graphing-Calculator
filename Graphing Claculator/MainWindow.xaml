@@ -29,7 +29,8 @@
         <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="50" Margin="275,325,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
 
 
-        <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="532" FontSize="24"/>
+        <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
+        <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="auto" />
 
     </Grid>
 </Window>
