@@ -37,8 +37,10 @@
         <DockPanel Height="20" Margin="0,0,0,0" VerticalAlignment="Top">
             <Menu DockPanel.Dock="Top" Height="20">
                 <MenuItem Header="_View">
-                    <MenuItem Header="Calculator" IsCheckable="True" IsChecked="True" />
-                    <MenuItem Header="Graphing" IsCheckable="True" IsChecked="False"/>
+                    <MenuItem Header="Calculator" IsCheckable="True" IsChecked="False" 
+                              Checked="Calculator_Checked" Unchecked="Calculator_Unchecked"/>
+                    <MenuItem Header="Graphing" IsCheckable="True" IsChecked="False" 
+                              Checked="Graphing_Checked" Unchecked="Graphing_Unchecked"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
