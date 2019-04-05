@@ -117,6 +117,7 @@ namespace Graphing_Claculator
         }
 
         //menu stuff
+        graphing Graph = new graphing();
         private void Calculator_Checked(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
@@ -129,8 +130,12 @@ namespace Graphing_Claculator
 
         private void Graphing_Checked(object sender, RoutedEventArgs e)
         {
-            var window = new Window();
-            window.Show();
+            if (Graph.IsVisible == true)
+            { }
+            else
+            {
+                Graph.Show();
+            }
         }
 
         private void Graphing_Unchecked(object sender, RoutedEventArgs e)
