@@ -31,16 +31,5 @@
 
             <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left"  Margin="0,20,0,0" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
 
-            <!-- still need to figure out how to add a graphing view 
-        needs to be done with the menu somehow-->
-
-            <DockPanel Height="20" Margin="0,0,0,0" VerticalAlignment="Top">
-                <Menu DockPanel.Dock="Top" Height="20">
-                    <MenuItem Header="_View">
-                        <MenuItem Header="Calculator" IsCheckable="True" IsChecked="False" />
-                        <MenuItem Header="Graphing" IsCheckable="True" IsChecked="True"/>
-                    </MenuItem>
-                </Menu>
-            </DockPanel>
         </Grid>
 </Window>

@@ -118,29 +118,14 @@ namespace Graphing_Claculator
 
         //menu stuff
         graphing Graph = new graphing();
-        private void Calculator_Checked(object sender, RoutedEventArgs e)
+        private void Calculator_Clicked(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
-        private void Calculator_Unchecked(object sender, RoutedEventArgs e)
+        private void Graphing_Clicked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        private void Graphing_Checked(object sender, RoutedEventArgs e)
-        {
-            if (Graph.IsVisible == true)
-            { }
-            else
-            {
-                Graph.Show();
-            }
-        }
-
-        private void Graphing_Unchecked(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
+            Graph.Show();
         }
 
     }
