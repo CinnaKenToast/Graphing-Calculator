@@ -157,5 +157,20 @@ namespace Graphing_Claculator
             Graph.Show();
         }
 
+        //TODO: implement these buttons
+        private void right_parentheses_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void left_parentheses_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void power_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

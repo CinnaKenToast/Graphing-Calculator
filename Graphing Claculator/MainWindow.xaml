@@ -34,6 +34,9 @@
         <Button x:Name="tan_button" Content="Tan()" HorizontalAlignment="Left" Height="40" Margin="285,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="tan_button_Click"/>
         <Button x:Name="cot_button" Content="Cot()" HorizontalAlignment="Left" Height="40" Margin="350,600,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="cot_button_Click"/>
 
+        <Button x:Name="left_parentheses_button" Content="(" HorizontalAlignment="Left" Height="40" Margin="25,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="left_parentheses_button_Click"/>
+        <Button x:Name="right_parentheses_button" Content=")" HorizontalAlignment="Left" Height="40" Margin="90,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="right_parentheses_button_Click"/>
+        <Button x:Name="power_button" Content="^" HorizontalAlignment="Left" Height="40" Margin="155,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="power_button_Click"/>
         <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="40" Margin="220,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
 
         <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left"  Margin="0,20,0,0" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
