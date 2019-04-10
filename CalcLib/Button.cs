@@ -69,6 +69,18 @@ namespace CalcLib
                     return Text += "/";
                 case "*":
                     return Text += "*";
+                case "Sin":
+                    return Text += "Sin(";
+                case "Cos":
+                    return Text += "Cos(";
+                case "Tan":
+                    return Text += "Tan(";
+                case "Csc":
+                    return Text += "Csc(";
+                case "Sec":
+                    return Text += "Sec(";
+                case "Cot":
+                    return Text += "Cot(";
                 default:
                     throw new ArgumentException("argument passed is not in switch statement!");
             }

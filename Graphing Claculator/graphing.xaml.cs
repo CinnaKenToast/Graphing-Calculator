@@ -103,6 +103,32 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
         }
 
+        //trig buttons 
+        private void sin_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sin");
+        }
+        private void cos_button_click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Cos");
+        }
+        private void tan_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Tan");
+        }
+        private void csc_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Csc");
+        }
+        private void sec_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sec");
+        }
+        private void cot_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Cot");
+        }
+
         //misc buttons
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
