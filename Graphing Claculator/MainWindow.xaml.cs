@@ -105,12 +105,42 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
         }
 
+        //trig buttons 
+        //TODO: Add functionality to these
+        private void sin_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void cos_button_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void tan_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void csc_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void sec_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void cot_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
         //misc buttons
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
+        //TODO: make this store input and pass it to parser
+        //      as well as retreive answer and display it
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
