@@ -70,17 +70,59 @@ namespace CalcLib
                 case "*":
                     return Text += "*";
                 case "Sin":
-                    return Text += "Sin(";
+                    if (Text == "0")
+                    {
+                        return Text = "Sin(";
+                    }
+                    else
+                    {
+                        return Text += "Sin(";
+                    }
                 case "Cos":
-                    return Text += "Cos(";
+                    if (Text == "0")
+                    {
+                        return Text = "Cos(";
+                    }
+                    else
+                    {
+                        return Text += "Cos(";
+                    }
                 case "Tan":
-                    return Text += "Tan(";
+                    if (Text == "0")
+                    {
+                        return Text = "Tan(";
+                    }
+                    else
+                    {
+                        return Text += "Tan(";
+                    }
                 case "Csc":
-                    return Text += "Csc(";
+                    if (Text == "0")
+                    {
+                        return Text = "Csc(";
+                    }
+                    else
+                    {
+                        return Text += "Csc(";
+                    }
                 case "Sec":
-                    return Text += "Sec(";
+                    if(Text == "0")
+                    {
+                        return Text = "Sec(";
+                    }
+                    else
+                    {
+                        return Text += "Sec(";
+                    }
                 case "Cot":
-                    return Text += "Cot(";
+                    if(Text == "0")
+                    {
+                        return Text = "Cot(";
+                    }
+                    else
+                    {
+                        return Text += "Cot(";
+                    }
                 default:
                     throw new ArgumentException("argument passed is not in switch statement!");
             }
