@@ -160,47 +160,47 @@ namespace Graphing_Claculator
         //TODO: implement these buttons
         private void right_parentheses_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ")");
         }
 
         private void left_parentheses_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "(");
         }
 
         private void power_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "^");
         }
 
         private void mod_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Mod(");
         }
 
         private void log_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Log(");
         }
 
         private void ln_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Ln(");
         }
 
         private void factorial_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "!");
         }
 
         private void negate_button_Click(object sender, RoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
         private void sqrt_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sqrt(");
         }
     }
 }

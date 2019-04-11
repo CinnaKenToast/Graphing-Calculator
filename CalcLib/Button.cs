@@ -123,6 +123,50 @@ namespace CalcLib
                     {
                         return Text += "Cot(";
                     }
+                case "(":
+                    return Text += "(";
+                case ")":
+                    return Text += ")";
+                case "^":
+                    return Text += "^";
+                case "Mod(":
+                    if(Text == "0")
+                    {
+                        return Text = "Mod(";
+                    }
+                    else
+                    {
+                        return Text += "Mod(";
+                    }
+                case "Log(":
+                    if (Text == "0")
+                    {
+                        return Text = "Log(";
+                    }
+                    else
+                    {
+                        return Text += "Log(";
+                    }
+                case "Ln(":
+                    if (Text == "0")
+                    {
+                        return Text = "Ln(";
+                    }
+                    else
+                    {
+                        return Text += "Ln(";
+                    }
+                case "!":
+                    return Text += "!";
+                case "Sqrt(":
+                    if (Text == "0")
+                    {
+                        return Text = "Sqrt(";
+                    }
+                    else
+                    {
+                        return Text += "Sqrt(";
+                    }
                 default:
                     throw new ArgumentException("argument passed is not in switch statement!");
             }
