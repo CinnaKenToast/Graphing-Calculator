@@ -172,5 +172,35 @@ namespace Graphing_Claculator
         {
 
         }
+
+        private void mod_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void log_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ln_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void factorial_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void negate_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sqrt_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
