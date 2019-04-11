@@ -140,12 +140,17 @@ namespace Graphing_Claculator
 
         //TODO: make this store input and pass it to parser
         //      as well as retreive answer and display it
+        List<string> input = new List<string>();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            input.Add(Screen.Text);
+            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
+
+            //MessageBox.Show(input[0]);
         }
 
         //menu stuff
+        //TODO: implement the calculator view button
         graphing Graph = new graphing();
         private void Calculator_Clicked(object sender, RoutedEventArgs e)
         {
