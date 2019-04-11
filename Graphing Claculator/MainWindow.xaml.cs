@@ -194,7 +194,7 @@ namespace Graphing_Claculator
 
         private void negate_button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "(+/-)");
         }
 
         private void sqrt_button_Click(object sender, RoutedEventArgs e)

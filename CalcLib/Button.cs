@@ -154,6 +154,16 @@ namespace CalcLib
                     else
                     {
                         return Text += "Sqrt(";
+
+                    }
+                case "(+/-)":
+                    if(Text.StartsWith("-"))
+                    {
+                        return Text.Remove(0, 1);
+                    }
+                    else
+                    {
+                        return Text.Insert(0, "-");
                     }
                 default:
                     throw new ArgumentException("argument passed is not in switch statement!");
