@@ -31,21 +31,9 @@ namespace CalcLib
             }
         }
 
-        //TODO: fix this
         public static string DecimalButtonPress(string Text)
         {
-            //if there is already a decimal, dont add another
-            //only works for the setup we have now,
-            //wont handle more than one number
-            if(Text.Contains("."))
-            {
-                return Text;
-            }
-            else
-            { 
-                Text += ".";
-                return Text;
-            }
+            return Text += ".";
         }
 
         //just sets the string in the text box to 0,

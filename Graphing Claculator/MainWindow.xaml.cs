@@ -157,7 +157,6 @@ namespace Graphing_Claculator
             Graph.Show();
         }
 
-        //TODO: implement these buttons
         private void right_parentheses_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ")");
