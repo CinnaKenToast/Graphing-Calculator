@@ -141,10 +141,13 @@ namespace Graphing_Claculator
         //TODO: make this store input and pass it to parser
         //      as well as retreive answer and display it
         List<string> input = new List<string>();
+        MathParser parser = new MathParser();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            input.Add(Screen.Text);
-            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
+            input.Insert(0,Screen.Text);
+            double ans = parser.Parse(input[0]);
+            Screen.Text = ans.ToString();
+            //Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
 
             //MessageBox.Show(input[0]);
         }
