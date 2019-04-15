@@ -57,59 +57,59 @@ namespace CalcLib
                     return Text += "/";
                 case "*":
                     return Text += "*";
-                case "Sin":
+                case "sin":
                     if (Text == "0")
                     {
-                        return Text = "Sin(";
+                        return Text = "sin(";
                     }
                     else
                     {
-                        return Text += "Sin(";
+                        return Text += "sin(";
                     }
-                case "Cos":
+                case "cos":
                     if (Text == "0")
                     {
-                        return Text = "Cos(";
+                        return Text = "cos(";
                     }
                     else
                     {
-                        return Text += "Cos(";
+                        return Text += "cos(";
                     }
-                case "Tan":
+                case "tan":
                     if (Text == "0")
                     {
-                        return Text = "Tan(";
+                        return Text = "tan(";
                     }
                     else
                     {
-                        return Text += "Tan(";
+                        return Text += "tan(";
                     }
-                case "Csc":
+                case "csc":
                     if (Text == "0")
                     {
-                        return Text = "Csc(";
+                        return Text = "csc(";
                     }
                     else
                     {
-                        return Text += "Csc(";
+                        return Text += "csc(";
                     }
-                case "Sec":
+                case "sec":
                     if(Text == "0")
                     {
-                        return Text = "Sec(";
+                        return Text = "sec(";
                     }
                     else
                     {
-                        return Text += "Sec(";
+                        return Text += "sec(";
                     }
-                case "Cot":
+                case "cot":
                     if(Text == "0")
                     {
-                        return Text = "Cot(";
+                        return Text = "cot(";
                     }
                     else
                     {
-                        return Text += "Cot(";
+                        return Text += "cot(";
                     }
                 case "(":
                     return Text += "(";
@@ -117,43 +117,43 @@ namespace CalcLib
                     return Text += ")";
                 case "^":
                     return Text += "^";
-                case "Mod(":
+                case "mod(":
                     if(Text == "0")
                     {
-                        return Text = "Mod(";
+                        return Text = "mod(";
                     }
                     else
                     {
-                        return Text += "Mod(";
+                        return Text += "mod(";
                     }
-                case "Log(":
+                case "log(":
                     if (Text == "0")
                     {
-                        return Text = "Log(";
+                        return Text = "log(";
                     }
                     else
                     {
-                        return Text += "Log(";
+                        return Text += "log(";
                     }
-                case "Ln(":
+                case "ln(":
                     if (Text == "0")
                     {
-                        return Text = "Ln(";
+                        return Text = "ln(";
                     }
                     else
                     {
-                        return Text += "Ln(";
+                        return Text += "ln(";
                     }
                 case "!":
                     return Text += "!";
-                case "Sqrt(":
+                case "sqrt(":
                     if (Text == "0")
                     {
-                        return Text = "Sqrt(";
+                        return Text = "sqrt(";
                     }
                     else
                     {
-                        return Text += "Sqrt(";
+                        return Text += "sqrt(";
 
                     }
                 case "(+/-)":
