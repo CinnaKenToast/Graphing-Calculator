@@ -102,33 +102,33 @@ namespace Graphing_Claculator
 
         private void decimal_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ".");
         }
 
         //trig buttons 
         private void sin_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sin");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sin(");
         }
         private void cos_button_click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cos");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cos(");
         }
         private void tan_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "tan");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "tan(");
         }
         private void csc_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "csc");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "csc(");
         }
         private void sec_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sec");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sec(");
         }
         private void cot_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cot");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cot(");
         }
 
 
@@ -138,16 +138,17 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
-        //TODO: make this store input and pass it to parser
-        //      as well as retreive answer and display it
+        //TODO: Make some sort of history display
         List<string> input = new List<string>();
         MathParser parser = new MathParser();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            input.Insert(0,Screen.Text);
+            //trim the input, save in it list
+            input.Insert(0,Screen.Text.Trim());
+
+            //get answer from parser, display on screen
             double ans = parser.Parse(input[0]);
             Screen.Text = ans.ToString();
-            //Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
 
             //MessageBox.Show(input[0]);
         }
@@ -208,6 +209,21 @@ namespace Graphing_Claculator
         private void sqrt_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sqrt(");
+        }
+
+        private void pi_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "pi");
+        }
+
+        private void delete_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.DeleteButtonPress(Screen.Text);
+        }
+
+        private void e_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "e");
         }
     }
 }

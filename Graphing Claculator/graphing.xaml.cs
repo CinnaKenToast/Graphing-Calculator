@@ -100,7 +100,7 @@ namespace Graphing_Claculator
 
         private void decimal_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ".");
         }
 
         //trig buttons 
