@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using CalcLib;
 
 public class MathParser
 {
-
+    
     #region Markers
 
     private const string NumberMarker = "#";
@@ -25,13 +26,13 @@ public class MathParser
     private const string LeftParen = OperatorMarker + "(";
     private const string RightParen = OperatorMarker + ")";
     private const string Sqrt = FunctionMarker + "sqrt";
+    private const string Log = FunctionMarker + "log";
     private const string Sin = FunctionMarker + "sin";
     private const string Cos = FunctionMarker + "cos";
     private const string Tan = FunctionMarker + "tan";
     private const string Csc = FunctionMarker + "csc";
     private const string Sec = FunctionMarker + "sec";
     private const string Cot = FunctionMarker + "cot";
-    private const string Log = FunctionMarker + "log";
     #endregion
     #region Supported Operators
     private readonly Dictionary<string, string> supportedOperators =
@@ -51,13 +52,13 @@ public class MathParser
         new Dictionary<string, string>
         {
             { "sqrt", Sqrt },
+            { "log", Log },
             { "sin", Sin },
             { "cos", Cos },
             { "tan", Tan },
             { "csc", Csc },
             { "sec", Sec },
-            { "cot", Cot },
-            { "log", Log }
+            { "cot", Cot }
         };
     #endregion
     #region Supported Constants 
@@ -67,10 +68,10 @@ public class MathParser
             { "pi", NumberMarker + Math.PI.ToString() },
             { "e", NumberMarker + Math.E.ToString() }
         };
-    #endregion
+
     private readonly char decimalSeparator;
     private bool isRadians;
-    
+    #endregion
 
     // Initializes new instance of MathParser (Decimal separator is retrieved from system settings)
     public MathParser()
@@ -164,7 +165,7 @@ public class MathParser
         }
         if(balanceOfParen != 0)
         {
-            throw new FormatException("Parentheses are not balanced");
+            throw new FormatException("Parenthesises are not balanced");
         }
         return formattedString.ToString();
     }
@@ -382,13 +383,13 @@ public class MathParser
             case Exponent:
             case Sqrt:
                 return 8;
+            case Log:
             case Sin:
             case Cos:
             case Tan:
             case Csc:
             case Sec:
             case Cot:
-            case Log:
                 return 10;
             default:
                 throw new ArgumentException("Unknown operator");
@@ -448,39 +449,53 @@ public class MathParser
         else if(NumberOfArguments(token) == 1)
         {
             double argument = stack.Pop();
+            NumExpression arg = new NumExpression(argument);
+            if (!isRadians)
+            {
+                argument = argument * Math.PI / 180; // Convert value to degree
+            }
+            NumExpression trigArg = new NumExpression(argument);
             double result;
 
             switch (token)
             {
                 case UnaryPlus:
-                    result = argument;
+                    result = arg.evaluate();
                     break;
                 case UnaryMinus:
-                    result = -argument;
+                    NegateExpresion neg = new NegateExpresion(arg);
+                    result = neg.evaluate();
                     break;
                 case Sqrt:
-                    result = Math.Sqrt(argument);
-                    break;
-                case Sin:
-                    result = ApplyTrigFunction(Math.Sin, argument);
-                    break;
-                case Cos:
-                    result = ApplyTrigFunction(Math.Cos, argument);
-                    break;
-                case Tan:
-                    result = ApplyTrigFunction(Math.Tan, argument);
-                    break;
-                case Csc:
-                    result = 1 / ApplyTrigFunction(Math.Sin, argument);
-                    break;
-                case Sec:
-                    result = 1 / ApplyTrigFunction(Math.Cos, argument);
-                    break;
-                case Cot:
-                    result = 1 / ApplyTrigFunction(Math.Tan, argument);
+                    SqrtExpression sqrt = new SqrtExpression(arg);
+                    result = sqrt.evaluate();
                     break;
                 case Log:
-                    result = Math.Log10(argument);
+                    result = Math.Log(argument, 10);
+                    break;
+                case Sin:
+                    SinExpression sin = new SinExpression(trigArg);
+                    result = sin.evaluate();
+                    break;
+                case Cos:
+                    CosExpression cos = new CosExpression(trigArg);
+                    result = cos.evaluate();
+                    break;
+                case Tan:
+                    TanExpression tan = new TanExpression(trigArg);
+                    result = tan.evaluate();
+                    break;
+                case Csc:
+                    CscExpression csc = new CscExpression(trigArg);
+                    result = csc.evaluate();
+                    break;
+                case Sec:
+                    SecExpression sec = new SecExpression(trigArg);
+                    result = sec.evaluate();
+                    break;
+                case Cot:
+                    CotExpression cot = new CotExpression(trigArg);
+                    result = cot.evaluate();
                     break;
                 default:
                     throw new ArgumentException("Unknown operator");
@@ -492,28 +507,35 @@ public class MathParser
             // otherwise operator's number of arguments equal to 2
             double argument2 = stack.Pop();
             double argument1 = stack.Pop();
+            NumExpression arg1 = new NumExpression(argument1);
+            NumExpression arg2 = new NumExpression(argument2);
             double result;
 
             switch (token)
             {
                 case Plus:
-                    result = argument1 + argument2;
+                    AdditionExpression add = new AdditionExpression(arg1, arg2);
+                    result = add.evaluate();
                     break;
                 case Minus:
-                    result = argument1 - argument2;
+                    MinusExpression minus = new MinusExpression(arg1, arg2);
+                    result = minus.evaluate();
                     break;
                 case Multiply:
-                    result = argument1 * argument2;
+                    MultiplyExpression multiply = new MultiplyExpression(arg1, arg2);
+                    result = multiply.evaluate();
                     break;
                 case Divide:
                     if (argument2 == 0)
                     {
                         throw new DivideByZeroException("Second argument is zero");
                     }
-                    result = argument1 / argument2;
+                    DivideExpression divide = new DivideExpression(arg1, arg2);
+                    result = divide.evaluate();
                     break;
                 case Exponent:
-                    result = Math.Pow(argument1, argument2);
+                    ExpononetExpression exp = new ExpononetExpression(arg1, arg2);
+                    result = exp.evaluate();
                     break;
                 default: throw new ArgumentException("Unknown operator");
             }
@@ -540,6 +562,7 @@ public class MathParser
             case UnaryPlus:
             case UnaryMinus:
             case Sqrt:
+            case Log:
             case Sin:
             case Cos:
             case Tan:
@@ -552,7 +575,6 @@ public class MathParser
             case Multiply:
             case Divide:
             case Exponent:
-            case Log:
                 return 2;
             default:
                 throw new ArgumentException("Unknown operator");
