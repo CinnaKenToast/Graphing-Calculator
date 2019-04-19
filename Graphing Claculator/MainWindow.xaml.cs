@@ -139,18 +139,18 @@ namespace Graphing_Claculator
         }
 
         //TODO: Make some sort of history display
-        List<string> input = new List<string>();
         MathParser parser = new MathParser();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            //trim the input, save in it list
-            input.Insert(0,Screen.Text.Trim());
-
+            //trim imput, send into parser
             //get answer from parser, display on screen
-            double ans = parser.Parse(input[0]);
-            Screen.Text = ans.ToString();
+            double ans = parser.Parse(Screen.Text.Trim());
 
-            //MessageBox.Show(input[0]);
+            //add input and answer to history
+            TextBlock.Text += Screen.Text.Trim() + "\n" + ans.ToString() + "\n";
+
+            //clear screen
+            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
         //menu stuff

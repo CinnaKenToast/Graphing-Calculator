@@ -47,7 +47,9 @@
         <Button x:Name="pi_button" Content="pi" HorizontalAlignment="Left" Height="40" Margin="350,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="pi_button_Click"/>
         <Button x:Name="delete_button" Content="delete" HorizontalAlignment="Left" Height="40" Margin="415,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="delete_button_Click"/>
 
-        <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left"  Margin="0,20,0,0" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
+        <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left"  Margin="0,265,0,0" Height="50" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="530" FontSize="24"/>
+        
+        
         
         <!-- still need to figure out how to add a graphing view 
         needs to be done with the menu somehow-->
@@ -60,6 +62,10 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
+        
+        <TextBlock x:Name="TextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,20,0,0" Height="350" FontSize="12"/>
+
+
 
     </Grid>
 </Window>
