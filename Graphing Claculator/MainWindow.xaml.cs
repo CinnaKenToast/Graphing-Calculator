@@ -136,9 +136,10 @@ namespace Graphing_Claculator
         private void clear_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
+            TextBlock.Text = ButtonControl.ClearButtonPress(TextBlock.Text);
         }
 
-        //TODO: Make some sort of history display
+        
         MathParser parser = new MathParser();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
