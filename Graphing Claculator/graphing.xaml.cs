@@ -135,6 +135,9 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
+        MathParser parser = new MathParser();
+
+        //TODO: when equal is clicked, graph that shit
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
@@ -183,6 +186,21 @@ namespace Graphing_Claculator
         private void sqrt_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sqrt(");
+        }
+
+        private void pi_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "pi");
+        }
+
+        private void delete_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.DeleteButtonPress(Screen.Text);
+        }
+
+        private void e_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "e");
         }
 
     }

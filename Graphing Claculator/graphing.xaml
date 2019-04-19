@@ -13,6 +13,7 @@
         <Button x:Name="plus_button" Content="+" HorizontalAlignment="Left" Height="40" Margin="220,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="plus_button_Click"/>
         <Button x:Name="factorial_button" Content="!" HorizontalAlignment="Left" Height="40" Margin="285,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="factorial_button_Click"/>
         <Button x:Name="sqrt_button" Content="sqrt()" HorizontalAlignment="Left" Height="40" Margin="350,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="sqrt_button_Click"/>
+        <Button x:Name="e_button" Content="e" HorizontalAlignment="Left" Height="40" Margin="415,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="e_button_Click"/>
 
         <Button x:Name="four_button" Content="4" HorizontalAlignment="Left" Height="40" Margin="25,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="four_button_Click"/>
         <Button x:Name="five_button" Content="5" HorizontalAlignment="Left" Height="40" Margin="90,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="five_button_Click"/>
@@ -43,6 +44,8 @@
         <Button x:Name="power_button" Content="^" HorizontalAlignment="Left" Height="40" Margin="155,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="power_button_Click"/>
         <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="40" Margin="220,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
         <Button x:Name="negate_button" Content="(+/-)" HorizontalAlignment="Left" Height="40" Margin="285,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="negate_button_Click"/>
+        <Button x:Name="pi_button" Content="pi" HorizontalAlignment="Left" Height="40" Margin="350,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="pi_button_Click"/>
+        <Button x:Name="delete_button" Content="delete" HorizontalAlignment="Left" Height="40" Margin="415,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="delete_button_Click"/>
 
         <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left"  Margin="0,20,0,0" Height="71" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="532" FontSize="24"/>
 
