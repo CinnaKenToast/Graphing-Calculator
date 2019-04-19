@@ -102,33 +102,33 @@ namespace Graphing_Claculator
 
         private void decimal_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.DecimalButtonPress(Screen.Text);
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ".");
         }
 
         //trig buttons 
         private void sin_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sin");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sin(");
         }
         private void cos_button_click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Cos");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cos(");
         }
         private void tan_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Tan");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "tan(");
         }
         private void csc_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Csc");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "csc(");
         }
         private void sec_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sec");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sec(");
         }
         private void cot_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Cot");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "cot(");
         }
 
 
@@ -138,14 +138,23 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
-        //TODO: make this store input and pass it to parser
-        //      as well as retreive answer and display it
+        //TODO: Make some sort of history display
+        MathParser parser = new MathParser();
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //trim imput, send into parser
+            //get answer from parser, display on screen
+            double ans = parser.Parse(Screen.Text.Trim());
+
+            //add input and answer to history
+            TextBlock.Text += Screen.Text.Trim() + "\n" + ans.ToString() + "\n";
+
+            //clear screen
+            Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
         //menu stuff
+        //TODO: implement the calculator view button
         graphing Graph = new graphing();
         private void Calculator_Clicked(object sender, RoutedEventArgs e)
         {
@@ -174,17 +183,17 @@ namespace Graphing_Claculator
 
         private void mod_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Mod(");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "mod(");
         }
 
         private void log_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Log(");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "log(");
         }
 
         private void ln_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Ln(");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "ln(");
         }
 
         private void factorial_button_Click(object sender, RoutedEventArgs e)
@@ -199,7 +208,22 @@ namespace Graphing_Claculator
 
         private void sqrt_button_Click(object sender, RoutedEventArgs e)
         {
-            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "Sqrt(");
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "sqrt(");
+        }
+
+        private void pi_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "pi");
+        }
+
+        private void delete_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.DeleteButtonPress(Screen.Text);
+        }
+
+        private void e_button_Click(object sender, RoutedEventArgs e)
+        {
+            Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "e");
         }
     }
 }
