@@ -31,11 +31,11 @@ namespace CalcLib
         abstract public double evaluate(double left, double right);
     }
 
-    class NumExression : IExpression
+    class NumExpression : IExpression
     {
         private double number;
 
-        public NumExression(double number)
+        public NumExpression(double number)
         {
             this.number = number;
         }
@@ -137,8 +137,8 @@ namespace CalcLib
 
     class FactorialExpresion : IExpression
     {
-        private double operand;
-        public FactorialExpresion(int operand)
+        private IExpression operand;
+        public FactorialExpresion(IExpression operand)
         {
             this.operand = operand;
         }
@@ -146,7 +146,7 @@ namespace CalcLib
         public double evaluate()
         {
             double ans = 1;
-            for(double i = operand; i > 1; i--)
+            for(double i = operand.evaluate(); i > 1; i--)
             {
                 ans = ans * i;
             }
@@ -156,87 +156,100 @@ namespace CalcLib
     
     class SinExpression: IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public SinExpression(double operand)
+        public SinExpression(IExpression operand)
         {
             this.operand = operand;
         }
 
         public double evaluate()
         {
-            return Math.Sin(operand);
+            return Math.Sin(operand.evaluate());
         }
     }
 
     class CosExpression : IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public CosExpression(double operand)
+        public CosExpression(IExpression operand)
         {
             this.operand = operand;
         }
 
         public double evaluate()
         {
-            return Math.Cos(operand);
+            return Math.Cos(operand.evaluate());
         }
     }
 
     class TanExpression : IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public TanExpression(double operand)
+        public TanExpression(IExpression operand)
         {
             this.operand = operand;
         }
 
         public double evaluate()
         {
-            return Math.Tan(operand);
+            return Math.Tan(operand.evaluate());
         }
     }
 
     class CotExpression : IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public CotExpression(double operand)
+        public CotExpression(IExpression operand)
         {
             this.operand = operand;
         }
         public double evaluate()
         {
-            return 1 / Math.Tan(operand);
+            return 1 / Math.Tan(operand.evaluate());
         }
     }
 
     class CscExpression : IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public CscExpression(double operand)
+        public CscExpression(IExpression operand)
         {
             this.operand = operand;
         }
         public double evaluate()
         {
-            return 1 / Math.Sin(operand);
+            return 1 / Math.Sin(operand.evaluate());
         }
     }
     class SecExpression : IExpression
     {
-        private double operand;
+        private IExpression operand;
 
-        public SecExpression(double operand)
+        public SecExpression(IExpression operand)
         {
             this.operand = operand;
         }
         public double evaluate()
         {
-            return 1 / Math.Cos(operand);
+            return 1 / Math.Cos(operand.evaluate());
+        }
+    }
+    class SqrtExpression : IExpression
+    {
+        private IExpression operand;
+
+        public SqrtExpression(IExpression operand)
+        {
+            this.operand = operand;
+        }
+        public double evaluate()
+        {
+            return Math.Sqrt(operand.evaluate());
         }
     }
 }
