@@ -148,7 +148,7 @@ namespace Graphing_Claculator
             double ans = parser.Parse(Screen.Text.Trim());
 
             //add input and answer to history
-            TextBlock.Text += Screen.Text.Trim() + "\n" + ans.ToString() + "\n";
+            TextBlock.Text += Screen.Text.Trim() + " = " + ans.ToString() + "\n";
 
             //clear screen
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
