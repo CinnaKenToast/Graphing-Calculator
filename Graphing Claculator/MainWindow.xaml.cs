@@ -169,19 +169,6 @@ namespace Graphing_Claculator
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
         }
 
-        //menu stuff
-        //TODO: implement the calculator view button
-        graphing Graph = new graphing();
-        private void Calculator_Clicked(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Graphing_Clicked(object sender, RoutedEventArgs e)
-        {
-            Graph.Show();
-        }
-
         private void right_parentheses_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, ")");
@@ -240,6 +227,13 @@ namespace Graphing_Claculator
         private void e_button_Click(object sender, RoutedEventArgs e)
         {
             Screen.Text = ButtonControl.arithmeticButonPress(Screen.Text, "e");
+        }
+
+
+        //TODO -> make shit happen here
+        private void Plot_button_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
