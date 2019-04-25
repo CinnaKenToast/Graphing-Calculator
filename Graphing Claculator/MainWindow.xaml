@@ -64,6 +64,7 @@
         </DockPanel>
         
         <TextBlock x:Name="TextBlock"  MaxHeight="250" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,20,0,0" Height="230" FontSize="12"/>
+        <CheckBox x:Name="Radians_Button" Content="Radians" IsChecked="True"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="415,320,0,0" Click="Radians_Button_Clicked" />
 
 
 

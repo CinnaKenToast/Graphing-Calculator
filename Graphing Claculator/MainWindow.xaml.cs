@@ -141,11 +141,26 @@ namespace Graphing_Claculator
 
         
         MathParser parser = new MathParser();
+        bool isRadians = true;
+
+        private void Radians_Button_Clicked(object sender, RoutedEventArgs e)
+        {
+            if(Radians_Button.IsChecked == true)
+            {
+                isRadians = true;
+            }
+            else
+            {
+                isRadians = false;
+            }
+        }
+
+
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
             //trim imput, send into parser
             //get answer from parser, display on screen
-            double ans = parser.Parse(Screen.Text.Trim());
+            double ans = parser.Parse(Screen.Text.Trim(), isRadians);
 
             //add input and answer to history
             TextBlock.Text += Screen.Text.Trim() + " = " + ans.ToString() + "\n";
