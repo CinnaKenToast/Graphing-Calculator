@@ -62,7 +62,7 @@ public class MathParser
         };
     #endregion
     #region Supported Constants 
-    private readonly Dictionary<string, string> supportedConstants =
+    private Dictionary<string, string> supportedConstants =
         new Dictionary<string, string>
         {
             { "pi", NumberMarker + Math.PI.ToString() },
@@ -73,6 +73,15 @@ public class MathParser
     private bool isRadians;
     #endregion
 
+    public void addVariable(string variable, double value)
+    {
+        supportedConstants.Add(variable, NumberMarker + value);
+    }
+
+    public void changeVariable(string variable, double value)
+    {
+        supportedConstants[variable] = NumberMarker + value;
+    }
     // Initializes new instance of MathParser (Decimal separator is retrieved from system settings)
     public MathParser()
 	{
