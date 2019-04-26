@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
-using System.Windows.Forms.Integration;
 using System.Windows.Forms;
 //how we get to to talk to our libary
 using CalcLib;
@@ -210,14 +209,15 @@ namespace Graphing_Claculator
             }
         }
 
-        private void Screen_KeyDown(object sender, KeyEventArgs e)
+        
+        private void Screen_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if(e.Key == Key.Return || e.Key == Key.Enter)
             {
                 equals_button_Click(sender, e);
             }
         }
-
+        
 
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
@@ -226,7 +226,8 @@ namespace Graphing_Claculator
             double ans = parser.Parse(Screen.Text.Trim(), isRadians);
 
             //add input and answer to history
-            TextBlock.Text += Screen.Text.Trim() + " = " + ans.ToString() + "\n";
+            TextBlock.AppendText(Screen.Text.Trim() + " = " + ans.ToString() + "\n");
+            TextBlock.ScrollToEnd();
 
             //clear screen
             Screen.Text = ButtonControl.ClearButtonPress(Screen.Text);
@@ -300,8 +301,6 @@ namespace Graphing_Claculator
 
             System.Drawing.Point currentPoint = new System.Drawing.Point();
             System.Drawing.Point previousPoint = new System.Drawing.Point();
-            bool isCurrentPoint = false;
-            bool isPreviousPoint = false;
             for (double x = minX; x < maxX; x += (maxX - minX)/sizeX)
             {
                 Line line = new Line();
@@ -320,15 +319,19 @@ namespace Graphing_Claculator
                    
 
                 previousPoint = currentPoint;
-                isPreviousPoint = isCurrentPoint;
             }
-            TextBlock.Text += Screen.Text.Trim() + " is plotted\n";
+            TextBlock.AppendText(Screen.Text.Trim() + " is plotted\n");
         }
 
         private void Clear_Plot_button_click(object sender, RoutedEventArgs e)
         {
             Canvas.Children.Clear();
             drawInitialCanvas();
+        }
+
+        private void clear_history_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock.Clear();
         }
 
         private void x_button_click(object sender, RoutedEventArgs e)

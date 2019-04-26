@@ -11,8 +11,8 @@
         <Button x:Name="two_button" Content="2" HorizontalAlignment="Left" Height="40" Margin="90,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="two_button_Click"/>
         <Button x:Name="three_button" Content="3" HorizontalAlignment="Left" Height="40" Margin="155,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="three_button_Click"/>
         <Button x:Name="plus_button" Content="+" HorizontalAlignment="Left" Height="40" Margin="220,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="plus_button_Click"/>
-        <Button x:Name="sqrt_button" Content="sqrt()" HorizontalAlignment="Left" Height="40" Margin="415,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="sqrt_button_Click"/>
-        <Button x:Name="e_button" Content="e" HorizontalAlignment="Left" Height="40" Margin="350,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="e_button_Click"/>
+        <Button x:Name="sqrt_button" Content="sqrt()" HorizontalAlignment="Left" Height="40" Margin="350,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="sqrt_button_Click"/>
+        <Button x:Name="e_button" Content="e" HorizontalAlignment="Left" Height="40" Margin="415,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="e_button_Click"/>
 
         <Button x:Name="four_button" Content="4" HorizontalAlignment="Left" Height="40" Margin="25,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="four_button_Click"/>
         <Button x:Name="five_button" Content="5" HorizontalAlignment="Left" Height="40" Margin="90,470,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="five_button_Click"/>
@@ -43,17 +43,18 @@
         <Button x:Name="power_button" Content="^" HorizontalAlignment="Left" Height="40" Margin="155,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="power_button_Click"/>
         <Button x:Name="clear_button" Content="c" HorizontalAlignment="Left" Height="40" Margin="220,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="clear_button_Click"/>
         <Button x:Name="negate_button" Content="(+/-)" HorizontalAlignment="Left" Height="40" Margin="285,405,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="negate_button_Click"/>
-        <Button x:Name="pi_button" Content="pi" HorizontalAlignment="Left" Height="40" Margin="350,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="pi_button_Click"/>
+        <Button x:Name="pi_button" Content="pi" HorizontalAlignment="Left" Height="40" Margin="415,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="pi_button_Click"/>
         <Button x:Name="delete_button" Content="delete" HorizontalAlignment="Left" Height="40" Margin="285,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="delete_button_Click"/>
 
         <TextBox x:Name="Screen" TextAlignment="Right" HorizontalAlignment="Left" KeyDown="Screen_KeyDown" Margin="3,265,0,0" Height="50" TextWrapping="Wrap" Text="0" VerticalAlignment="top" Width="455" FontSize="24"/>
 
-        <TextBlock x:Name="TextBlock"  MaxHeight="250" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,10,0,0" Height="230" FontSize="12" Width="450"/>
+        <TextBox x:Name="TextBlock"  MaxHeight="250" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0,10,0,0" Height="230" FontSize="12" Width="450" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
         <CheckBox x:Name="Radians_Button" Content="Radians" IsChecked="True"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="390,320,0,0" Click="Radians_Button_Clicked" />
         <Button Content="Plot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Margin="480,600,0,0" Click="Plot_button_click"/>
         <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="650" VerticalAlignment="Top" Width="650" Margin="570,10,0,0" ClipToBounds="true"/>
         <Button x:Name="Clear_Plot" Content="ClrPlot" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="40" Height="40" Margin="480,535,0,0" Click="Clear_Plot_button_click"/>
         <Button x:Name="x" Content="x" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="40" Height="40" Margin="480,470,0,0" Click="x_button_click"/>
+        <Button x:Name="clear_history_button" Content="ClrHst" HorizontalAlignment="Left" Height="40" Margin="350,340,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="2.462,0.771" Click="clear_history_button_Click"/>
 
 
 
