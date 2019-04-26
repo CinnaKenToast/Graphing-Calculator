@@ -93,6 +93,17 @@ namespace CalcLib
             return left / right;
         }
     }
+    class ModExpression : BinaryExpression
+    {
+        public ModExpression(IExpression left, IExpression right) : base(left, right)
+        {
+        }
+
+        public override double evaluate(double left, double right)
+        {
+            return left % right;
+        }
+    }
 
     class ExpononetExpression : BinaryExpression
     {
@@ -121,6 +132,21 @@ namespace CalcLib
         }
     }
 
+    class LnExpression : IExpression
+    {
+        private IExpression operand;
+
+        public LnExpression(IExpression operand)
+        {
+            this.operand = operand;
+        }
+
+        public double evaluate()
+        {
+            return Math.Log(operand.evaluate());
+        }
+    }
+
     class NegateExpresion : IExpression
     {
         private IExpression operand;
@@ -135,24 +161,6 @@ namespace CalcLib
         }
     }
 
-    class FactorialExpresion : IExpression
-    {
-        private IExpression operand;
-        public FactorialExpresion(IExpression operand)
-        {
-            this.operand = operand;
-        }
-
-        public double evaluate()
-        {
-            double ans = 1;
-            for(double i = operand.evaluate(); i > 1; i--)
-            {
-                ans = ans * i;
-            }
-            return ans;
-        }
-    }
     
     class SinExpression: IExpression
     {

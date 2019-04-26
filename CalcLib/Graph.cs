@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Drawing;
 namespace CalcLib
 {
-    class Graph
+    public class Graph
     {
-        private IExpression equation;
         private double xUpperBound;
         private double xLowerBound;
         private double yUpperBound;
         private double yLowerBound;
-        private int Zoom;
-        private bool Axis;
-        int NumFunctions;
+        private double numPoints;
+        private double resolution;
         private MathParser parser;
 
         public Graph()
@@ -24,63 +23,42 @@ namespace CalcLib
             xLowerBound = -10;
             yUpperBound = 10;
             yLowerBound = -10;
-            Zoom = 1;
-            Axis = true;
-            parser.addVariable("x", 1); // 1 will be default value of x
-            NumFunctions = 0;
+            parser = new MathParser();
+            numPoints = 10;
+            resolution = 1 / numPoints;
         }
 
-        public void changeZoom(int zoom)
+        public double getXLowerBound()
         {
-            Zoom = zoom;
+            return xLowerBound;
         }
-
-        public void changeXBounds(int lower, int upper)
+        public double getXUpperBound()
         {
-            xLowerBound = lower;
-            xUpperBound = upper;
+            return xUpperBound;
         }
-
-        public void changeYBounds(int lower, int upper)
+        public double getYLowerBound()
         {
-            yLowerBound = lower;
-            yUpperBound = upper;
+            return yLowerBound;
         }
-
-        public void showHideAxis()
+        public double getYUpperBound()
         {
-            if(Axis == true)
-            {
-                Axis = false;
-            }
-            else
-            {
-                Axis = true;
-            }
+            return yUpperBound;
         }
-
-        public void CreateFucntion(string Expression)
+        public double getResoltuion()
         {
-            NumFunctions++;
-            string fileName = "function" + NumFunctions + ".data";
-            StreamWriter sw = new StreamWriter(fileName);
-
-            double numPoints = 1000;
-            double resolution = 1/numPoints;
+            return resolution;
+        }
+        public double getY(string Expression, double x)
+        {
             double y;
-            sw.WriteLine(numPoints);
-            for (double x = xLowerBound; x <= xUpperBound; x += resolution)
-            {
-                parser.changeVariable("x", x);
-                y = parser.Parse(Expression);
-                sw.WriteLine(x + " " + y);
-            }
-        }
+            parser.changeVariable("x", x);
+            y = parser.Parse(Expression);
 
-        public void plot()
-        {
-            string fileName = "function" + NumFunctions + ".data";
-            StreamReader file = new StreamReader(fileName);
+            PointF point = new PointF();
+            point.X = (float)x;
+            point.Y = (float)y;
+
+            return y;
 
         }
     }

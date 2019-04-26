@@ -25,8 +25,10 @@ public class MathParser
     private const string Exponent = OperatorMarker + "^";
     private const string LeftParen = OperatorMarker + "(";
     private const string RightParen = OperatorMarker + ")";
+    private const string Mod = OperatorMarker + "%";
     private const string Sqrt = FunctionMarker + "sqrt";
     private const string Log = FunctionMarker + "log";
+    private const string Ln = FunctionMarker + "ln";
     private const string Sin = FunctionMarker + "sin";
     private const string Cos = FunctionMarker + "cos";
     private const string Tan = FunctionMarker + "tan";
@@ -44,7 +46,8 @@ public class MathParser
             { "/", Divide },
             { "^", Exponent },
             { "(", LeftParen },
-            { ")", RightParen }
+            { ")", RightParen },
+            { "%", Mod }
         };
     #endregion
     #region Supported Fucntions
@@ -53,6 +56,7 @@ public class MathParser
         {
             { "sqrt", Sqrt },
             { "log", Log },
+            { "ln", Ln },
             { "sin", Sin },
             { "cos", Cos },
             { "tan", Tan },
@@ -66,7 +70,8 @@ public class MathParser
         new Dictionary<string, string>
         {
             { "pi", NumberMarker + Math.PI.ToString() },
-            { "e", NumberMarker + Math.E.ToString() }
+            { "e", NumberMarker + Math.E.ToString() },
+            { "x" , NumberMarker + 1.ToString() }
         };
 
     private readonly char decimalSeparator;
@@ -75,12 +80,12 @@ public class MathParser
 
     public void addVariable(string variable, double value)
     {
-        supportedConstants.Add(variable, NumberMarker + value);
+        supportedConstants.Add(variable, NumberMarker + value.ToString());
     }
 
     public void changeVariable(string variable, double value)
     {
-        supportedConstants[variable] = NumberMarker + value;
+        supportedConstants[variable] = NumberMarker + value.ToString();
     }
     // Initializes new instance of MathParser (Decimal separator is retrieved from system settings)
     public MathParser()
@@ -388,11 +393,13 @@ public class MathParser
                 return 6;
             case Multiply:
             case Divide:
+            case Mod:
                 return 4;
             case Exponent:
             case Sqrt:
                 return 8;
             case Log:
+            case Ln:
             case Sin:
             case Cos:
             case Tan:
@@ -480,7 +487,12 @@ public class MathParser
                     result = sqrt.evaluate();
                     break;
                 case Log:
-                    result = Math.Log(argument, 10);
+                    LogarithmExpression log = new LogarithmExpression(arg);
+                    result = log.evaluate();
+                    break;
+                case Ln:
+                    LnExpression ln = new LnExpression(arg);
+                    result = ln.evaluate();
                     break;
                 case Sin:
                     SinExpression sin = new SinExpression(trigArg);
@@ -542,6 +554,10 @@ public class MathParser
                     DivideExpression divide = new DivideExpression(arg1, arg2);
                     result = divide.evaluate();
                     break;
+                case Mod:
+                    ModExpression mod = new ModExpression(arg1, arg2);
+                    result = mod.evaluate();
+                        break;
                 case Exponent:
                     ExpononetExpression exp = new ExpononetExpression(arg1, arg2);
                     result = exp.evaluate();
@@ -553,16 +569,6 @@ public class MathParser
         return stack;
     }
 
-    // Applies trig function to an argument
-    private double ApplyTrigFunction(Func<double, double> func, double argument)
-    {
-        if (!isRadians)
-        {
-            argument = argument * Math.PI / 180; // Convert value to degree
-        }
-        return func(argument);
-    }
-
     // Determines number of arguments for an operator
     private int NumberOfArguments(string token)
     {
@@ -572,6 +578,7 @@ public class MathParser
             case UnaryMinus:
             case Sqrt:
             case Log:
+            case Ln:
             case Sin:
             case Cos:
             case Tan:
@@ -584,6 +591,7 @@ public class MathParser
             case Multiply:
             case Divide:
             case Exponent:
+            case Mod:
                 return 2;
             default:
                 throw new ArgumentException("Unknown operator");
