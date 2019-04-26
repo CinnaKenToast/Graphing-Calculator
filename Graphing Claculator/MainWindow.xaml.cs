@@ -26,6 +26,27 @@ namespace Graphing_Claculator
     {
         public void drawInitialCanvas()
         {
+            // Draw Grid
+            for(double i = 0; i < Canvas.Height; i += Canvas.Height / 20)
+            {
+                Line line = new Line();
+                line.Stroke = System.Windows.Media.Brushes.LightGray;
+                line.X1 = i;
+                line.Y1 = 0;
+                line.X2 = i;
+                line.Y2 = Canvas.Height;
+                Canvas.Children.Add(line);
+            }
+            for (double i = 0; i < Canvas.Height; i += Canvas.Height / 20)
+            {
+                Line line = new Line();
+                line.Stroke = System.Windows.Media.Brushes.LightGray;
+                line.X1 = 0;
+                line.Y1 = i;
+                line.X2 = Canvas.Width;
+                line.Y2 = i;
+                Canvas.Children.Add(line);
+            }
             // Draw Borders
             Line borderLine1 = new Line();
             borderLine1.Stroke = System.Windows.Media.Brushes.Black;
