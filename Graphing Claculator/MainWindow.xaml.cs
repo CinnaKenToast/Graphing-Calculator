@@ -155,6 +155,14 @@ namespace Graphing_Claculator
             }
         }
 
+        private void Screen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Return || e.Key == Key.Enter)
+            {
+                equals_button_Click(sender, e);
+            }
+        }
+
 
         private void equals_button_Click(object sender, RoutedEventArgs e)
         {
